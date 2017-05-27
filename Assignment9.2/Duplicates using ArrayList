@@ -1,0 +1,28 @@
+package myPack;
+import java.util.*;// importing uutility class
+
+public class Duplicates {//creating a ArrayList class which can store duplicates
+	
+	public static void main(String[] args) {
+		
+		ArrayList<String> companies = new ArrayList<String>();//Creating arraylist  
+		
+		companies.add("Mphasis");//Adding object in arraylist 
+		companies.add("Cognizant");
+		companies.add("Mphasis");
+		companies.add("TCS");
+		companies.add("Wipro");
+		companies.add("TCS");
+		companies.add("Accenture");
+		companies.add("INTEL");
+		companies.add("Google");
+		companies.add("TCS");
+		companies.add("Cognizant");
+		
+		//Traversing list through Iterator
+		 Iterator itr=companies.iterator();  
+		  while(itr.hasNext()){  
+		   System.out.println(itr.next()); // Printing the output which will contain duplicates 
+		  }  
+		 }  
+		}  

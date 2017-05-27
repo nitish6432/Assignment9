@@ -1,0 +1,38 @@
+package myPack;
+import java.util.ArrayList;// importing
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class HDTV2 {
+	
+	public static void main(String a[]){
+        //Creating list
+        List<HDTV> list = new ArrayList<HDTV>();
+        //Adding new objects to Arraylist
+        list.add(new HDTV("Tohshiba",18));
+        list.add(new HDTV("Samsung",28));
+        list.add(new HDTV("Sony",26));
+        list.add(new HDTV("Acer",16));
+        //Sorting list 
+        Collections.sort(list,new MySalaryComp());
+        System.out.println("Sorted list entries: ");
+        //Iterating on list and printing output
+        for(HDTV e:list){
+            System.out.println(e.size+"  "+e.brandname);
+        }
+    }
+}
+//Overiding Comparator  
+class MySalaryComp implements Comparator<HDTV>{
+ 
+    @Override
+    public int compare(HDTV e1, HDTV e2) {
+        if(e1.getSize() < e2.getSize()){
+            return 1;
+        } else {
+            return -1;
+        }
+    }
+	}
+

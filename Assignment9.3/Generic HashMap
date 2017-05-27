@@ -1,0 +1,33 @@
+package myPack;
+
+
+import java.util.HashMap;     /*importing necessary classes from util package */
+import java.util.Map;
+import java.util.Iterator;
+import java.util.Set;
+
+public class Details {
+
+   public static void main(String args[]) {
+
+      /* This is how to declare HashMap */
+      HashMap<Integer, String> hmap = new HashMap<Integer, String>();
+
+      /*Adding elements to HashMap in key value pairs with emp ids as keys and names as values*/
+      
+      hmap.put(33, "Chaitanya");
+      hmap.put(22, "Rahul");
+      hmap.put(77, "Singh");
+      hmap.put(44, "Ajeet");
+      hmap.put(55, "Anuj");
+
+      /* Display content using Iterator*/
+      Set set = hmap.entrySet();
+      Iterator iterator = set.iterator();
+      while(iterator.hasNext()) {
+         Map.Entry entry = (Map.Entry)iterator.next();// key value pairs are saved in entry
+         System.out.print(" EmpName is: ");
+        System.out.println(entry.getValue());//Displaying only EmpNames as output
+      }
+   }
+}
